@@ -1,0 +1,40 @@
+
+/* home.html styling */
+
+#bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+}
+
+.navbg {
+    background-color: #220627;
+ 
+}
+
+.navtext{
+    font-weight: bolder;
+    font-size:1.2rem;
+}
+
+
+/* detail.html styling */
+
+#heading{
+    color: whitesmoke;
+    font-family: 'Abril Fatface', cursive;
+    font-weight: bold;
+}
+
+#form_font{
+    font-family: 'Concert One', cursive;
+}
+
+
+#hello{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+
+}
+

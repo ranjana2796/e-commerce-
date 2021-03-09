@@ -1,0 +1,52 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static "style.css"%}">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+
+    <title>Payment</title>
+</head>
+<body  id="bg" style="background-image:url('{% static "img/detailbg.png"%}');">
+
+    <div id ='form_font' class="container" align="center">
+            <br><h1 id ="heading"><u> Customer Details </u></h1><br>
+                
+                <form action="success/" method="post">
+                    {{form.as_p}}
+                    {% csrf_token %}
+                    
+                    <script
+                    src="https://checkout.razorpay.com/v1/checkout.js"
+                    data-key="rzp_test_0jL0GaLT2hFewt" // Enter the Test API Key ID generated from Dashboard → Settings → API Keys
+                    data-amount="50000" // Amount is in currency subunits. Hence, 29935 refers to 29935 paise or ₹299.35.
+                    data-currency="INR"
+                    data-buttontext="Pay Now"
+                    data-name="Ecommerce"
+                    data-image="https://p1.hiclipart.com/preview/318/642/515/shopping-cart-online-shopping-flat-design-basket-pink-material-property-magenta-circle-png-clipart.jpg"
+                    data-prefill.name="Ramu"
+                    data-prefill.email="ramu123@gmail.com"
+                    data-theme.color="#F37254"
+                    ></script>
+                    <input type="hidden" custom="Hidden Element" name="hidden">
+                    &nbsp;
+                    <button id="hello" type="reset" class="btn atc btn-light"><a class="badge badge-light">  Reset </a></button>
+                </form>
+                    <button id="hello"  class="btn atc btn-danger"><a href="\home" class="badge badge-danger">  Back To Home </a></button>
+                    &nbsp;
+    </div>
+   
+
+
+</body>
+</html>
